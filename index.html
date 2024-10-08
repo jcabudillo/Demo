@@ -80,9 +80,33 @@
             object-fit: cover;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
+        .about {
+            position: absolute; /* Positioned in the right corner */
+            top: 20px; /* Distance from the top */
+            right: 20px; /* Distance from the right */
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: max-height 0.5s ease-in-out; /* Smooth transition */
+            overflow: hidden; /* Hide overflow */
+        }
+        .about .names {
+            display: none; /* Initially hide names */
+        }
+        .about:hover .names {
+            display: block; /* Show names on hover */
+        }
         #contact {
             margin-top: 30px;
             color: white;
+            text-align: center;
+        }
+        #disclaimer {
+            margin-top: 30px;
+            color: white;
+            text-align: center;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -90,8 +114,13 @@
 
     <img src="img/logo.jpg" alt="Restaurant Logo" class="logo">
 
-    <h1>JJMJ Restaurant Menu - "Eat Now!, Diet Later!"</h1>
-
+    <h1>JJMJ Restaurant Menu - "Eat Now, Diet Later"</h1>
+    <div class="about">
+        <p><strong>About:</strong></p>
+        <div class="names">
+            <p><strong>Submitted by:</strong><br> Jxxxxxx Cxxxxxxxx,<br> Jxxxxxxx Dxxxxxxx,<br> Mxx Jxxx Mxxxxxx</p>
+        </div>
+    </div>
     <!-- Seafood Category -->
     <div class="category">
         <h2 onclick="toggleMenu('seafood')">Seafood</h2>
@@ -148,63 +177,59 @@
                     <img src="img/main3.jpg" alt="Chicken Parmesan">
                 </a>
                 <h3>Chicken Parmesan</h3>
-                <p class="description">Breaded chicken topped with marinara and cheese.</p>
-                <p class="price">Php599.00</p>
+                <p class="description">Breaded chicken breast topped with marinara sauce.</p>
+                <p class="price">Php499.00</p>
             </div>
         </div>
     </div>
 
-    <!-- Drinks Category -->
+    <!-- drinks Category -->
     <div class="category">
         <h2 onclick="toggleMenu('drinks')">Drinks</h2>
         <div id="drinks" class="menu-container">
             <div class="menu-item">
-                <a href="https://media.istockphoto.com/id/1307546222/photo/mojito-cocktail-with-lime-and-mint.jpg?s=1024x1024&w=is&k=20&c=qh42lrKzNxyVsGgUurzsT27Atr_RjprzwQZK49bX_NE=" target="_blank">
-                    <img src="img/drink1.jpg" alt="Mojito">
+                <a href="https://media.istockphoto.com/id/1220337014/photo/delicious-chocolate-cake-with-chocolate-cream.jpg?s=1024x1024&w=is&k=20&c=QH7OV-Mf0-kxz2g0e-gRMBtG9D8cP-cgo1jYX-7rb3Y=" target="_blank">
+                    <img src="img/drink1.jpg" alt="Chocolate Cake">
                 </a>
-                <h3>Mojito</h3>
-                <p class="description">Refreshing mint and lime cocktail.</p>
+                <h3>Chocolate Cake</h3>
+                <p class="description">Rich and moist chocolate cake.</p>
                 <p class="price">Php199.00</p>
             </div>
             <div class="menu-item">
-                <a href="https://media.istockphoto.com/id/1207124173/photo/cocktail-cosmo.jpg?s=1024x1024&w=is&k=20&c=UM5pggZsTte6owSbJlgk8-fyWo0PSJmGQIjPzYjxLn4=" target="_blank">
-                    <img src="img/drink2.jpg" alt="Cosmopolitan">
+                <a href="https://media.istockphoto.com/id/151868091/photo/slices-of-cherry-cheesecake.jpg?s=1024x1024&w=is&k=20&c=kgG_f4cOGYcCF5T2O9TWsGgxsXKHQwr28z3GVcxDgIA=" target="_blank">
+                    <img src="img/drink2.jpg" alt="Cherry Cheesecake">
                 </a>
-                <h3>Cosmopolitan</h3>
-                <p class="description">Classic cocktail with vodka and cranberry.</p>
+                <h3>Cherry Cheesecake</h3>
+                <p class="description">Creamy cheesecake topped with cherries.</p>
                 <p class="price">Php249.00</p>
             </div>
             <div class="menu-item">
-                <a href="https://media.istockphoto.com/id/1177390848/photo/coffee-cup.jpg?s=1024x1024&w=is&k=20&c=9rsO1s_BJhyLJb3NYyA3f2fBYbCDZowbpByGg2PM1Lw=" target="_blank">
-                    <img src="img/drink3.jpg" alt="Coffee">
+                <a href="https://media.istockphoto.com/id/1200126029/photo/caramel-ice-cream-in-cup-with-chocolate-syrup-and-caramel-sauce.jpg?s=1024x1024&w=is&k=20&c=KpCjpRAI6kSokfAfax5YYUnPoqAK7KOxjjBqRoL8AfY=" target="_blank">
+                    <img src="img/drink3.jpg" alt="Caramel Ice Cream">
                 </a>
-                <h3>Coffee</h3>
-                <p class="description">Freshly brewed coffee to energize your day.</p>
-                <p class="price">Php99.00</p>
+                <h3>Caramel Ice Cream</h3>
+                <p class="description">Creamy ice cream drizzled with caramel sauce.</p>
+                <p class="price">Php149.00</p>
             </div>
         </div>
     </div>
 
-    <script>
-        function toggleMenu(categoryId) {
-            const menuContainer = document.getElementById(categoryId);
-            if (menuContainer.style.display === "none" || menuContainer.style.display === "") {
-                menuContainer.style.display = "flex"; // Show the menu
-            } else {
-                menuContainer.style.display = "none"; // Hide the menu
-            }
+    <!-- Contact Section -->
+    <div id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@jjmjrestaurant.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Main Street, Food City, FC 12345</p>
+    </div>
+
+      <script>
+        function toggleMenu(category) {
+            const menuContainer = document.getElementById(category);
+            menuContainer.style.display = (menuContainer.style.display === 'flex') ? 'none' : 'flex';
         }
     </script>
-    <section id="contact">
-        <h2 style="color: white">Contact Us</h2>
-        <p style="color: white">Have any questions, feedback, or special requests? Feel free to reach out to us!</p>
-        <p style="color: white">Email: <a href="mailto:contact@jjmjrestaurant.com" style="color: white">contact@jjmjrestaurant.com</a></p>
-        <p style="color: white">Phone: <a href="tel:+1234567890" style="color: white">+123 456 7890</a></p>
-        <p style="color: white">Address: 123 Picolo St., Nemic</p>
-    </section>
-
-    <footer style="text-align: center; margin-top: 30px; color: white; background-color: rgba(0, 0, 0, 0.7); padding: 10px; border-radius: 10px;">
-        <p>Disclaimer: The information and images presented are fictional and intended solely for educational purposes in the context of web design.</p>
-    </footer>
+        <footer style="text-align: center; margin-top: 30px; color: white; background-color: rgba(0, 0, 0, 0.7); padding: 10px; border-radius: 10px;">
+            <p>Disclaimer: The information and images presented are fictional and intended solely for educational purposes in the context of web design.</p>
+        </footer>
 </body>
 </html>
