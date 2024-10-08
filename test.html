@@ -18,26 +18,9 @@
             text-align: center;
             color: white;
             background-color: rgba(0, 56, 168, 0.7); /* Semi-transparent blue */
-            margin-bottom: 5px;
+            margin-bottom: 30px;
             padding: 10px;
             border-radius: 10px;
-        }
-        nav {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 10px;
-            background-color: rgba(0, 56, 168, 0.8); /* Blue background for the links */
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: rgba(0, 56, 168, 1); /* Darker blue on hover */
         }
         .category {
             margin-bottom: 20px;
@@ -85,72 +68,124 @@
             font-weight: bold;
             color: #CE1126; /* Red */
         }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            border-radius: 10px;
-        }
-        section {
-            background-color: rgba(255, 255, 255, 0.9); /* White with slight transparency */
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            margin: 30px 0;
-        }
     </style>
 </head>
 <body>
 
     <h1>JJMJ Restaurant Menu</h1>
-    
-    <!-- Navigation Links -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#contact">Contact Us</a>
-    </nav>
 
-    <!-- Categories -->
     <div class="category">
         <h2>Seafood</h2>
         <div class="menu-container">
-            <!-- Menu items -->
+            <div class="menu-item">
+                <a href="https://media.istockphoto.com/id/1207107546/photo/salmon-raw-trout-red-fish-steak-with-ingredients-for-cooking-cooking-salmon-sea-food-healthy.jpg?s=1024x1024&w=is&k=20&c=doZBSN2wgQ3h6_7bN9brNeCLiDbXkO4zVbDHMzupg70=" target="_blank">
+                    <img src="img/seafood1.jpg" alt="Grilled Salmon">
+                </a>
+                <h3>Grilled Salmon</h3>
+                <p class="description">Juicy grilled salmon served with Life Insurance.</p>
+                <p class="price">Php15.99</p>
+            </div>
+
+            <div class="menu-item">
+                <a href="https://media.istockphoto.com/id/469311080/photo/jumbo-shrimp-scampi-sauteeing-in-butter-and-olive-oil.jpg?s=1024x1024&w=is&k=20&c=hubOt7GiPVDHgpSEWcl3s-oHqH1d5Mv-3OIilpcsAD4=" target="_blank">
+                    <img src="img/seafood2.jpg" alt="Shrimp Scampi">
+                </a>
+                <h3>Shrimp Scampi</h3>
+                <p class="description">Shrimp sautéed in garlic and fully syntethic oil.</p>
+                <p class="price">Php13.99</p>
+            </div>
+
+            <div class="menu-item">
+                <a href="https://media.istockphoto.com/id/1408117677/photo/steamed-lobster-tail.jpg?s=1024x1024&w=is&k=20&c=Fw0mBDz-SP4vXrpgjn_A9Q6bcTPIRN9G0HLGF-5Mbt0=" target="_blank">
+                    <img src="img/seafood3.jpg" alt="Lobster Tail">
+                </a>
+                <h3>Lobster Tail</h3>
+                <p class="description">Succulent lobster tail grilled to perfection.</p>
+                <p class="price">Php29.99</p>
+            </div>
         </div>
     </div>
 
     <div class="category">
         <h2>Main Dishes</h2>
         <div class="menu-container">
-            <!-- Menu items -->
+            <div class="menu-item">
+                <a href="https://media.istockphoto.com/id/587207508/photo/sliced-grilled-steak-ribeye-with-herb-butter.jpg?s=1024x1024&w=is&k=20&c=Huz6w1foEuq-U2oyHpuIhZKCcH1uf0XAmRJ5V9f5WJE=" target="_blank">
+                    <img src="img/main1.jpg" alt="Ribeye Steak">
+                </a>
+                <h3>Ribeye Steak</h3>
+                <p class="description">Tender ribeye steak grilled to your liking.</p>
+                <p class="price">Php24.99</p>
+            </div>
+
+            <div class="menu-item">
+                <a href="https://media.istockphoto.com/id/506916161/photo/homemade-fettucini-aflredo-pasta.jpg?s=1024x1024&w=is&k=20&c=KvQQgiHKR8yyMzkoW2amD3RmBc0UBeyaPUd5XiuEefc=" target="_blank">
+                    <img src="img/main2.jpg" alt="Fettuccine Alfredo">
+                </a>
+                <h3>Fettuccine Alfredo</h3>
+                <p class="description">Creamy Alfredo sauce over fettuccine pasta.</p>
+                <p class="price">Php12.99</p>
+            </div>
+
+            <div class="menu-item">
+                <a href="https://media.istockphoto.com/id/523256382/photo/chicken-parmesan-with-spaghetti.jpg?s=1024x1024&w=is&k=20&c=OymGDmJZSVaALz9vvP_eNK3dVXE-sUdw2koK7SY34X4=" target="_blank">
+                    <img src="img/main3.jpg" alt="Chicken Parmesan">
+                </a>
+                <h3>Chicken Parmesan</h3>
+                <p class="description">Breaded chicken topped with marinara and cheese.</p>
+                <p class="price">Php14.99</p>
+            </div>
         </div>
     </div>
 
     <div class="category">
         <h2>Drinks</h2>
         <div class="menu-container">
-            <!-- Menu items -->
+            <div class="menu-item">
+                <a href="https://media.istockphoto.com/id/1307546222/photo/mojito-cocktail-with-lime-and-mint.jpg?s=1024x1024&w=is&k=20&c=qh42lrKzNxyVsGgUurzsT27Atr_RjprzwQZK49bX_NE=" target="_blank">
+                    <img src="img/drink1.jpg" alt="Mojito">
+                </a>
+                <h3>Mojito</h3>
+                <p class="description">Refreshing mint and lime cocktail.</p>
+                <p class="price">Php8.99</p>
+            </div>
+
+            <div class="menu-item">
+                <a href="https://media.istockphoto.com/id/537228258/photo/mason-jar-glasses-of-homemade-lemonade-on-rustic-wood.jpg?s=1024x1024&w=is&k=20&c=eOY9IrSITgu2_V-yKASKkmDZZBF2bXcq40cRLvIIq50=" target="_blank">
+                    <img src="img/drink2.jpg" alt="Fresh Lemonade">
+                </a>
+                <h3>Fresh Lemonade</h3>
+                <p class="description">Crisp and refreshing homemade lemonade.</p>
+                <p class="price">Php4.99</p>
+            </div>
+
+            <div class="menu-item">
+                <a href="https://media.istockphoto.com/id/1081811672/photo/pour-wine-in-a-glass.jpg?s=1024x1024&w=is&k=20&c=eetD5yho8Ze4o5jSjel1QDRE4G56WE2e89sGxbQneKE=" target="_blank">
+                    <img src="img/drink3.jpg" alt="Red Wine">
+                </a>
+                <h3>Red Wine</h3>
+                <p class="description">A rich red wine to complement your meal.</p>
+                <p class="price">Php12.99</p>
+            </div>
         </div>
     </div>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Welcome to JJMJ Restaurant! We offer a variety of delicious dishes, ranging from succulent seafood to mouth-watering steaks. Our mission is to provide high-quality food with the freshest ingredients and to deliver a unique dining experience that reflects our passion for great cuisine.</p>
+    <!-- Menu Section -->
+    <section id="menu">
+        <!-- Your existing menu code here -->
+        <!-- Category, Menu Items -->
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, feedback, or special requests, feel free to reach out to us!</p>
-        <p>Email: contact@jjmjrestaurant.com</p>
-        <p>Phone: +123 456 7890</p>
-        <p>Address: 123 Foodie Lane, Flavor Town</p>
+        <h2 style="color: white">Contact Us</h2>
+        <p style="color: white">Have any questions, feedback, or special requests? Feel free to reach out to us!</p>
+        <p style="color: white">Email: <a href="mailto:contact@jjmjrestaurant.com" style="color: white">contact@jjmjrestaurant.com</a></p>
+        <p style="color: white">Phone: <a href="tel:+1234567890" style="color: white">+123 456 7890</a></p>
+        <p style="color: white">Address: 123 Street, Nemic</p>
+
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <footer style="text-align: center; margin-top: 30px; color: white; background-color: rgba(0, 0, 0, 0.7); padding: 10px; border-radius: 10px;">
         <p>Disclaimer: The information and images presented are fictional and intended solely for educational purposes in the context of web design.</p>
     </footer>
 
